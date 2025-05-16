@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Animado</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0e0e0e;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(120deg, #1f1c2c, #928dab);
+      padding: 4rem 2rem;
+      text-align: center;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #ff4d4d;
+      padding-left: 10px;
+      animation: slideInLeft 1s ease-out forwards;
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #1f1f1f;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: #292929;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff4d4d;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff1a1a;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background: #1f1f1f;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInLeft {
+      0% { opacity: 0; transform: translateX(-50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sebastián Barbosa</h1>
+  <p>Desarrollador de videojuegos & Diseñador técnico</p>
+</header>
+
+<section class="fade-up">
+  <h2>Habilidades</h2>
+  <div class="skills">
+    <div class="card">Unity 2D/3D</div>
+    <div class="card">Unreal Engine 5</div>
+    <div class="card">C# y C++</div>
+    <div class="card">Diseño de UI/UX</div>
+  </div>
+</section>
+
+<section class="fade-up">
+  <h2>Proyectos</h2>
+  <div class="projects">
+    <div class="card">👾 Juego Metroidvania</div>
+    <div class="card">🎮 Puzzle Árbol Binario</div>
+    <div class="card">🧠 Sistema de FSM IA</div>
+  </div>
+</section>
+
+<section class="fade-up">
+  <h2>Contacto</h2>
+  <p>¿Querés trabajar conmigo? Escribime a:</p>
+  <a href="mailto:sebastian@email.com" class="btn">Enviar email</a>
+</section>
+
+<footer>
+  &copy; 2025 Sebastián Barbosa – Todos los derechos reservados
+</footer>
+
+<script>
+  // Animación al hacer scroll
+  const fadeUps = document.querySelectorAll('.fade-up');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  fadeUps.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
