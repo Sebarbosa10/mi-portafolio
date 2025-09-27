@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desarrollo de Videojuegos | Sebastián Barbosa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0e0e0e;
+      color: white;
+    }
+
+    nav {
+      background: #111;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      color: #ff4d4d;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff4d4d;
+    }
+
+    header {
+      padding: 5rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+    }
+
+    header h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ddd;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h3 {
+      color: #ff4d4d;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #111;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      header h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <h1>SBarbosa</h1>
+  <a href="index.html">Volver al inicio</a>
+</nav>
+
+<header>
+  <h2>Desarrollo de Videojuegos</h2>
+  <p>Explorá mis proyectos de gameplay, IA, diseño de niveles y programación en Unity & Unreal Engine.</p>
+</header>
+
+<section>
+  <h2>Proyectos destacados</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=SthealGame" alt="SthealGame">
+      <div class="card-content">
+        <h3>SthealGame</h3>
+        <p>Juego de sigilo con sistema FSM, visión line of sight y enemigos programados desde cero.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Adópolis" alt="Adópolis">
+      <div class="card-content">
+        <h3>Adópolis</h3>
+        <p>Aventura narrativa ambientada en la fiebre amarilla del siglo XIX. Puzzle detectivesco y visual gótico.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=TreePuzzle" alt="Binary Tree Puzzle">
+      <div class="card-content">
+        <h3>Árbol Binario</h3>
+        <p>Puzzle con interacción drag and drop y validación automática de árbol de búsqueda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Tecnologías utilizadas</h2>
+  <ul style="list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; padding: 0; justify-content: center; margin-top: 2rem;">
+    <li>🎮 Unity C#</li>
+    <li>🎮 Unreal Engine 5</li>
+    <li>🧠 FSM personalizada</li>
+    <li>🧪 Photon PUN</li>
+    <li>🕹️ IA & Pathfinding</li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2025 Sebastián Barbosa – Desarrollador de videojuegos
+</footer>
+
+</body>
+</html>
