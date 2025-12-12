@@ -451,6 +451,56 @@
             gap: 1rem;
         }
 
+        .project-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-download {
+            padding: 0.7rem 1.5rem;
+            background: rgba(88, 101, 242, 0.2);
+            color: #5865f2;
+            border: 2px solid #5865f2;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-download:hover {
+            background: #5865f2;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(88, 101, 242, 0.4);
+        }
+
+        .btn-demo {
+            padding: 0.7rem 1.5rem;
+            background: transparent;
+            color: #ff4757;
+            border: 2px solid #ff4757;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-demo:hover {
+            background: #ff4757;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+        }
+
         .contact-content {
             text-align: center;
             max-width: 800px;
@@ -605,6 +655,7 @@
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View Projects 🎮</a>
                 <a href="#contact" class="btn btn-secondary">Contact 📧</a>
+                <a href="path/to/your/cv.pdf" download="Sebastian_Barbosa_CV.pdf" class="btn btn-secondary">Download CV 📄</a>
             </div>
         </div>
         <div class="hero-visual">
@@ -707,7 +758,10 @@
                         <span class="tech-tag">3D</span>
                         <span class="tech-tag">AI</span>
                     </div>
-                    <a href="#" class="project-link">View details →</a>
+                    <div class="project-buttons">
+                        <a href="path/to/project1/build.zip" download="Capstone_Project_Build.zip" class="btn-download">📥 Download Build</a>
+                        <a href="#" class="btn-demo">▶️ Play Demo</a>
+                    </div>
                 </div>
             </div>
 
@@ -721,7 +775,10 @@
                         <span class="tech-tag">Blueprints</span>
                         <span class="tech-tag">C++</span>
                     </div>
-                    <a href="#" class="project-link">View details →</a>
+                    <div class="project-buttons">
+                        <a href="path/to/project2/build.zip" download="UE5_Prototype_Build.zip" class="btn-download">📥 Download Build</a>
+                        <a href="#" class="btn-demo">▶️ Play Demo</a>
+                    </div>
                 </div>
             </div>
 
@@ -735,7 +792,10 @@
                         <span class="tech-tag">AI</span>
                         <span class="tech-tag">Design Patterns</span>
                     </div>
-                    <a href="#" class="project-link">View details →</a>
+                    <div class="project-buttons">
+                        <a href="path/to/project3/build.zip" download="AI_System_Build.zip" class="btn-download">📥 Download Build</a>
+                        <a href="#" class="btn-demo">▶️ View Code</a>
+                    </div>
                 </div>
             </div>
         </div>
