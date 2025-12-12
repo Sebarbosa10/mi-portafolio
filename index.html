@@ -392,6 +392,12 @@
             overflow: hidden;
         }
 
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .project-image::after {
             content: '';
             position: absolute;
@@ -399,7 +405,12 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+        }
+
+        .project-card:hover .project-image::after {
+            background: rgba(0, 0, 0, 0.4);
         }
 
         .project-content {
@@ -748,7 +759,9 @@
         <h2 class="section-title">My Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image">🎮</div>
+                <div class="project-image">
+                    <img src="https://drive.google.com/uc?export=view&id=1xklekCVUQzemeukUZWjLEQf-ZQIkKJdH" alt="Aedopolis Screenshot">
+                </div>
                 <div class="project-content">
                     <h3>Aedopolis</h3>
                     <p>First published game developed over a year using Unity 3D. Role as 3D Artist creating models and textures with PS1-era aesthetic. Collaborated with team to deliver complete gaming experience on itch.io.</p>
@@ -766,7 +779,9 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image">🔷</div>
+                <div class="project-image">
+                    <img src="https://drive.google.com/uc?export=view&id=11lAJ6mqeV3I3CwbIGIR442Z120F86sSe" alt="Unreal Engine AI Project Screenshot">
+                </div>
                 <div class="project-content">
                     <h3>Unreal Engine 5 - AI Project</h3>
                     <p>Academic project developed in Unreal Engine featuring AI implementation with Behavior Trees, Blueprint coding, and custom level design. Demonstrates advanced AI behaviors and environmental interaction systems.</p>
@@ -784,7 +799,9 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image">🤖</div>
+                <div class="project-image">
+                    <img src="https://drive.google.com/uc?export=view&id=1xklekCVUQzemeukUZWjLEQf-ZQIkKJdH" alt="AI FSM Project Screenshot">
+                </div>
                 <div class="project-content">
                     <h3>AI Programming - FSM & Line of Sight</h3>
                     <p>Academic project for Artificial Intelligence Programming course. Implemented Finite State Machine (FSM) and Line of Sight system for intelligent enemy behavior and player detection mechanics.</p>
@@ -803,7 +820,9 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image">🃏</div>
+                <div class="project-image">
+                    <img src="https://drive.google.com/uc?export=view&id=1GGJ8kg1VlR92Q_OcXY8xmbrV_-VN-5_G" alt="Card Combat Game Screenshot">
+                </div>
                 <div class="project-content">
                     <h3>Card Combat Game with Live Action Cinematics</h3>
                     <p>Innovative team project combining card-based combat with live-action cinematics filmed and produced by the team. Developed the turn-based system and card combat mechanics as lead programmer.</p>
