@@ -269,22 +269,49 @@
         }
 
         .about-intro {
-            text-align: center;
-            max-width: 800px;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .about-intro h3 {
+        .about-photo {
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #5865f2;
+            box-shadow: 0 0 25px rgba(88, 101, 242, 0.3);
+        }
+
+        .about-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-intro-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .about-intro-text h3 {
             font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             color: #5865f2;
         }
 
-        .about-intro p {
-            font-size: 1.05rem;
+        .about-intro-text p {
+            font-size: 1rem;
             color: #b0b0b0;
-            line-height: 1.9;
-            margin-bottom: 1rem;
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+        }
+
+        .about-intro-text p:last-child {
+            margin-bottom: 0;
         }
 
         .about-columns {
@@ -450,25 +477,24 @@
         .project-layout {
             display: grid;
             grid-template-columns: 1.2fr 1fr;
-            min-height: 420px;
         }
 
         .project-image {
-            background: linear-gradient(135deg, #5865f2 0%, #ff4757 100%);
+            background: linear-gradient(135deg, #1a1f3a 0%, #0a0e27 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
             position: relative;
             overflow: hidden;
-            min-height: 420px;
+            min-height: 350px;
         }
 
         .project-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: center;
+            object-fit: contain;
+            padding: 1rem;
         }
 
         .project-content {
@@ -695,11 +721,25 @@
             }
 
             .project-image {
-                min-height: 250px;
+                min-height: 280px;
             }
 
             .about-columns {
                 grid-template-columns: 1fr;
+            }
+
+            .about-intro {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-intro-text {
+                text-align: center;
+            }
+
+            .about-photo {
+                width: 180px;
+                height: 180px;
             }
         }
 
@@ -809,10 +849,15 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-intro">
-                <h3>Game Developer in Training</h3>
-                <p>I'm a Video Game Development student at UADE (Buenos Aires) with a strong foundation in object-oriented programming and practical experience in Unity and Unreal Engine 5.</p>
-                <p>My focus is on integrating artificial intelligence into gameplay mechanics, software design patterns, data structures, and system optimization. Currently developing a 3D game as a capstone project using Unity.</p>
-                <p>I'm looking to join a professional development team where I can contribute with my technical skills, learn from experienced developers, and grow as a game programmer.</p>
+                <div class="about-photo">
+                    <img src="assets/images/profile.jpg" alt="Sebastián Barbosa">
+                </div>
+                <div class="about-intro-text">
+                    <h3>Game Developer in Training</h3>
+                    <p>I'm a Video Game Development student at UADE (Buenos Aires) with a strong foundation in object-oriented programming and practical experience in Unity and Unreal Engine 5.</p>
+                    <p>My focus is on integrating artificial intelligence into gameplay mechanics, software design patterns, data structures, and system optimization. Currently developing a 3D game as a capstone project using Unity.</p>
+                    <p>I'm looking to join a professional development team where I can contribute with my technical skills, learn from experienced developers, and grow as a game programmer.</p>
+                </div>
             </div>
 
             <div class="about-columns">
