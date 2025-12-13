@@ -19,6 +19,7 @@
             overflow-x: hidden;
         }
 
+        /* Animated Background */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -62,7 +63,7 @@
         }
 
         nav {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -113,11 +114,12 @@
         }
 
         section {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 6rem 2rem;
         }
 
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -130,19 +132,20 @@
 
         .hero-content {
             flex: 1;
+            max-width: 600px;
             animation: fadeInLeft 1s;
         }
 
         .hero-content .greeting {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #5865f2;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             font-weight: 600;
         }
 
         .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
             background: linear-gradient(135deg, #ffffff 0%, #5865f2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -151,28 +154,28 @@
         }
 
         .hero-content .title {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #ff4757;
             margin-bottom: 1.5rem;
             font-weight: 600;
         }
 
         .hero-content p {
-            font-size: 1.15rem;
-            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
             color: #b0b0b0;
             line-height: 1.8;
-            max-width: 600px;
+            text-align: left;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 2rem;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
@@ -180,8 +183,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            position: relative;
-            overflow: hidden;
+            font-size: 0.95rem;
         }
 
         .btn-primary {
@@ -207,14 +209,14 @@
         }
 
         .hero-visual {
-            flex: 1;
+            flex: 0.8;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .game-controller {
-            font-size: 15rem;
+            font-size: 12rem;
             animation: float 3s ease-in-out infinite;
             filter: drop-shadow(0 0 40px rgba(88, 101, 242, 0.5));
         }
@@ -235,25 +237,16 @@
             }
         }
 
+        /* Section Titles */
         .section-title {
-            font-size: 3rem;
+            font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
             background: linear-gradient(135deg, #ffffff 0%, #5865f2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             position: relative;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #888;
-            font-size: 1.1rem;
-            margin-bottom: 4rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .section-title::after {
@@ -262,110 +255,145 @@
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
+            width: 80px;
+            height: 3px;
             background: linear-gradient(90deg, #5865f2, #ff4757);
             border-radius: 2px;
         }
 
+        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: start;
         }
 
         .about-text h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
             color: #5865f2;
+            text-align: left;
         }
 
         .about-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
             color: #b0b0b0;
             line-height: 1.8;
-            text-align: justify;
+            text-align: left;
         }
 
         .tech-stack {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
         .tech-stack h4 {
             color: #ff4757;
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
+            text-align: left;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
         }
 
         .skill-card {
             background: rgba(88, 101, 242, 0.1);
-            border: 2px solid rgba(88, 101, 242, 0.3);
-            padding: 1rem;
-            border-radius: 10px;
+            border: 1px solid rgba(88, 101, 242, 0.3);
+            padding: 0.8rem;
+            border-radius: 8px;
             text-align: center;
             transition: all 0.3s;
+            font-size: 0.9rem;
         }
 
         .skill-card:hover {
             background: rgba(88, 101, 242, 0.2);
             border-color: #5865f2;
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
 
         .skill-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
         }
 
         .experience-section {
             background: rgba(88, 101, 242, 0.05);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid rgba(88, 101, 242, 0.2);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(88, 101, 242, 0.2);
+        }
+
+        .experience-section h3 {
+            color: #ff4757;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            text-align: left;
         }
 
         .experience-item {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
         }
 
         .experience-item h4 {
             color: #5865f2;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
         }
 
         .experience-item .company {
             color: #ff4757;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
         }
 
         .experience-item .date {
             color: #888;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
         }
 
-        /* Carousel Styles */
+        .experience-item p {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .languages-section {
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+
+        .languages-section h4 {
+            color: #5865f2;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .languages-section p {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Projects Carousel */
+        .projects-section {
+            padding: 6rem 0;
+        }
+
         .carousel-container {
             position: relative;
             max-width: 900px;
             margin: 0 auto;
-            padding: 0 60px;
-        }
-
-        .carousel-wrapper {
             overflow: hidden;
-            border-radius: 15px;
         }
 
         .carousel-track {
@@ -373,18 +401,38 @@
             transition: transform 0.5s ease-in-out;
         }
 
-        .project-card {
+        .carousel-slide {
             min-width: 100%;
+            padding: 0 1rem;
+        }
+
+        .project-card {
             background: rgba(26, 31, 58, 0.8);
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
-            border: 2px solid rgba(88, 101, 242, 0.2);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(88, 101, 242, 0.2);
+            transition: all 0.4s;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .project-card:hover {
+            border-color: #5865f2;
+            box-shadow: 0 10px 30px rgba(88, 101, 242, 0.3);
+        }
+
+        .project-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 350px;
         }
 
         .project-image {
-            width: 100%;
-            height: 400px;
+            background: linear-gradient(135deg, #5865f2 0%, #ff4757 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
             position: relative;
             overflow: hidden;
         }
@@ -395,93 +443,89 @@
             object-fit: cover;
         }
 
-        .project-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
-        }
-
         .project-content {
-            padding: 2.5rem;
-            position: relative;
-            z-index: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
         }
 
         .project-content h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
             color: #ffffff;
         }
 
         .project-content p {
             color: #b0b0b0;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            text-align: justify;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         .project-tech {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
+            gap: 0.4rem;
+            margin-bottom: 1.2rem;
         }
 
         .tech-tag {
             background: rgba(88, 101, 242, 0.2);
             color: #5865f2;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
             border: 1px solid rgba(88, 101, 242, 0.3);
         }
 
         .project-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 0.8rem;
             flex-wrap: wrap;
-            justify-content: center;
         }
 
         .btn-download {
-            padding: 0.9rem 2rem;
-            background: linear-gradient(135deg, #5865f2 0%, #764ba2 100%);
-            color: white;
-            border: none;
+            padding: 0.6rem 1.2rem;
+            background: rgba(88, 101, 242, 0.2);
+            color: #5865f2;
+            border: 1px solid #5865f2;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+            border-radius: 6px;
+            font-weight: 600;
             transition: all 0.3s;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 1rem;
+            gap: 0.4rem;
+            font-size: 0.85rem;
         }
 
         .btn-download:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(88, 101, 242, 0.5);
+            background: #5865f2;
+            color: white;
+            transform: translateY(-2px);
         }
 
         /* Carousel Controls */
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
         .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(88, 101, 242, 0.8);
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
-            font-size: 1.5rem;
+            background: rgba(88, 101, 242, 0.2);
+            border: 1px solid rgba(88, 101, 242, 0.3);
+            color: #5865f2;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: all 0.3s;
-            z-index: 10;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -489,116 +533,108 @@
 
         .carousel-btn:hover {
             background: #5865f2;
-            transform: translateY(-50%) scale(1.1);
+            color: white;
+            transform: scale(1.1);
         }
 
-        .carousel-btn.prev {
-            left: 0;
-        }
-
-        .carousel-btn.next {
-            right: 0;
-        }
-
-        .carousel-indicators {
+        .carousel-dots {
             display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
+            gap: 0.5rem;
         }
 
-        .indicator {
-            width: 12px;
-            height: 12px;
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: rgba(88, 101, 242, 0.3);
             cursor: pointer;
             transition: all 0.3s;
         }
 
-        .indicator.active {
+        .carousel-dot.active {
             background: #5865f2;
-            width: 40px;
-            border-radius: 6px;
+            transform: scale(1.2);
+        }
+
+        .carousel-dot:hover {
+            background: #5865f2;
         }
 
         /* Contact Section */
         .contact-content {
             text-align: center;
-            max-width: 900px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
         .contact-content > p {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
             color: #b0b0b0;
         }
 
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .contact-card {
             background: rgba(88, 101, 242, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid rgba(88, 101, 242, 0.2);
+            padding: 1.5rem 1rem;
+            border-radius: 10px;
+            border: 1px solid rgba(88, 101, 242, 0.2);
             transition: all 0.3s;
         }
 
         .contact-card:hover {
             background: rgba(88, 101, 242, 0.15);
             border-color: #5865f2;
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
 
         .contact-card .icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            margin-bottom: 0.6rem;
         }
 
         .contact-card h4 {
             color: #5865f2;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
         }
 
-        .contact-card a {
+        .contact-card a,
+        .contact-card p {
             color: #b0b0b0;
             text-decoration: none;
             transition: color 0.3s;
-            word-break: break-all;
+            font-size: 0.85rem;
+            word-break: break-word;
         }
 
         .contact-card a:hover {
             color: #5865f2;
         }
 
-        .contact-card p {
-            color: #b0b0b0;
-        }
-
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
 
         .social-btn {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             background: rgba(88, 101, 242, 0.2);
-            border: 2px solid rgba(88, 101, 242, 0.3);
+            border: 1px solid rgba(88, 101, 242, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             text-decoration: none;
             transition: all 0.3s;
         }
@@ -606,24 +642,47 @@
         .social-btn:hover {
             background: #5865f2;
             border-color: #5865f2;
-            transform: translateY(-5px) rotate(360deg);
+            transform: translateY(-3px);
         }
 
         footer {
             background: rgba(10, 14, 39, 0.95);
             color: #b0b0b0;
             text-align: center;
-            padding: 2.5rem;
-            border-top: 2px solid rgba(88, 101, 242, 0.3);
+            padding: 2rem;
+            border-top: 1px solid rgba(88, 101, 242, 0.3);
+            font-size: 0.9rem;
         }
 
-        footer p {
-            line-height: 1.8;
+        footer p:last-child {
+            margin-top: 0.3rem;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .project-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .project-image {
+                height: 200px;
+            }
         }
 
         @media (max-width: 768px) {
             .hero {
                 flex-direction: column;
+                text-align: center;
+                padding-top: 6rem;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-content p {
                 text-align: center;
             }
 
@@ -631,8 +690,8 @@
                 font-size: 2.5rem;
             }
 
-            .hero-content p {
-                max-width: 100%;
+            .hero-buttons {
+                justify-content: center;
             }
 
             .game-controller {
@@ -643,31 +702,63 @@
                 grid-template-columns: 1fr;
             }
 
+            .about-text h3,
+            .about-text p {
+                text-align: center;
+            }
+
+            .tech-stack h4 {
+                text-align: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .experience-section h3,
+            .experience-item {
+                text-align: center;
+            }
+
+            .languages-section {
+                text-align: center;
+            }
+
             .nav-links {
                 gap: 1rem;
                 font-size: 0.9rem;
             }
 
-            .hero-buttons {
+            .contact-info {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+                margin: 0 auto 2rem;
+            }
+
+            .project-content {
+                text-align: center;
+            }
+
+            .project-tech {
                 justify-content: center;
             }
 
-            .carousel-container {
-                padding: 0 50px;
+            .project-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
             }
 
-            .carousel-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
+            section {
+                padding: 4rem 1.5rem;
             }
 
-            .project-image {
-                height: 300px;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
             }
         }
     </style>
@@ -706,7 +797,6 @@
 
     <section id="about">
         <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Learn more about my background, skills, and experience</p>
         <div class="about-content">
             <div class="about-text">
                 <h3>Game Developer in Training</h3>
@@ -762,109 +852,256 @@
             </div>
 
             <div class="experience-section">
-                <h3 style="color: #ff4757; margin-bottom: 2rem;">📚 Education & Experience</h3>
+                <h3>📚 Education & Experience</h3>
                 
                 <div class="experience-item">
                     <h4>Bachelor of Science in Video Game Development</h4>
                     <div class="company">Universidad Argentina de la Empresa (UADE)</div>
                     <div class="date">Ongoing - Buenos Aires, Argentina</div>
-                    <p style="color: #b0b0b0;">Actively involved in programming and game design team projects. Currently developing a 3D game as a capstone project using Unity.</p>
+                    <p>Actively involved in programming and game design team projects. Currently developing a 3D game as a capstone project using Unity.</p>
                 </div>
 
                 <div class="experience-item">
                     <h4>Graphic Designer & Admin Assistant</h4>
                     <div class="company">Photos & Puntos</div>
                     <div class="date">Jul 2017 - Jan 2023 | Caracas, Venezuela</div>
-                    <p style="color: #b0b0b0;">Photo editing and retouching using Adobe Photoshop. Created corporate documents and promotional designs.</p>
+                    <p>Photo editing and retouching using Adobe Photoshop. Created corporate documents and promotional designs.</p>
                 </div>
 
-                <div style="margin-top: 2rem;">
-                    <h4 style="color: #5865f2; margin-bottom: 1rem;">🌍 Languages</h4>
-                    <p style="color: #b0b0b0;">• Spanish - Native<br>• English - B2 (Intermediate)</p>
+                <div class="languages-section">
+                    <h4>🌍 Languages</h4>
+                    <p>Spanish - Native | English - B2 (Intermediate)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="projects-section">
         <h2 class="section-title">My Projects</h2>
-        <p class="section-subtitle">Explore my game development work and technical implementations</p>
         
         <div class="carousel-container">
-            <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
-            <button class="carousel-btn next" onclick="moveCarousel(1)">›</button>
+            <div class="carousel-track">
+                <!-- Proyecto 1 -->
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <div class="project-layout">
+                            <div class="project-image">
+                                <img src="assets/images/aedopolis.jpg" alt="Aedopolis Screenshot">
+                            </div>
+                            <div class="project-content">
+                                <h3>Aedopolis</h3>
+                                <p>First published game developed over a year using Unity 3D. Role as 3D Artist creating models and textures with PS1-era aesthetic. Collaborated with team to deliver complete gaming experience on itch.io.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Unity 3D</span>
+                                    <span class="tech-tag">3D Modeling</span>
+                                    <span class="tech-tag">Texturing</span>
+                                    <span class="tech-tag">PS1 Aesthetic</span>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="https://smartmonkeys.itch.io/aedopolis" target="_blank" class="btn-download">🎮 Play on itch.io</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <div class="project-layout">
+                            <div class="project-image">
+                                <img src="assets/images/unreal-ai.jpg" alt="Unreal Engine AI Project">
+                            </div>
+                            <div class="project-content">
+                                <h3>Unreal Engine 5 - AI Project</h3>
+                                <p>Academic project developed in Unreal Engine featuring AI implementation with Behavior Trees, Blueprint coding, and custom level design. Demonstrates advanced AI behaviors and environmental interaction systems.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Unreal Engine 5</span>
+                                    <span class="tech-tag">Blueprints</span>
+                                    <span class="tech-tag">Behavior Trees</span>
+                                    <span class="tech-tag">Level Design</span>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="https://drive.google.com/uc?export=download&id=1dOHMtFwhtX4kJMGtbIDD5l9qjpQaSztE" target="_blank" class="btn-download">📥 Download Build</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <div class="project-layout">
+                            <div class="project-image">
+                                <img src="assets/images/fsm-project.jpg" alt="AI FSM Project">
+                            </div>
+                            <div class="project-content">
+                                <h3>AI Programming - FSM & Line of Sight</h3>
+                                <p>Academic project for Artificial Intelligence Programming course. Implemented Finite State Machine (FSM) and Line of Sight system for intelligent enemy behavior and player detection mechanics.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Unity</span>
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">FSM</span>
+                                    <span class="tech-tag">Line of Sight</span>
+                                    <span class="tech-tag">AI</span>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="https://drive.google.com/uc?export=download&id=1KyGBW2YJNEib8BMbqIqk9YxnuRR-20hP" target="_blank" class="btn-download">📥 Download Build</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <div class="project-layout">
+                            <div class="project-image">
+                                <img src="assets/images/card-game.jpg" alt="Card Combat Game">
+                            </div>
+                            <div class="project-content">
+                                <h3>Card Combat Game</h3>
+                                <p>Innovative team project combining card-based combat with live-action cinematics filmed and produced by the team. Developed the turn-based system and card combat mechanics as lead programmer.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Unity</span>
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">Turn-Based System</span>
+                                    <span class="tech-tag">Card Mechanics</span>
+                                </div>
+                                <div class="project-buttons">
+                                    <a href="https://drive.google.com/uc?export=download&id=1kyPi_Lwt4QwQbTaTlM7zSggs2SlM9A45" target="_blank" class="btn-download">📥 Download Build</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn">◀</button>
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" data-index="0"></span>
+                    <span class="carousel-dot" data-index="1"></span>
+                    <span class="carousel-dot" data-index="2"></span>
+                    <span class="carousel-dot" data-index="3"></span>
+                </div>
+                <button class="carousel-btn" id="nextBtn">▶</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-content">
+            <p>Have a project in mind or want to collaborate? I'd love to connect with you!</p>
             
-            <div class="carousel-wrapper">
-                <div class="carousel-track" id="carouselTrack">
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/images/aedopolis.jpg" alt="Aedopolis Screenshot">
-                        </div>
-                        <div class="project-content">
-                            <h3>Aedopolis</h3>
-                            <p>First published game developed over a year using Unity 3D. Role as 3D Artist creating models and textures with PS1-era aesthetic. Collaborated with team to deliver complete gaming experience on itch.io.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Unity 3D</span>
-                                <span class="tech-tag">3D Modeling</span>
-                                <span class="tech-tag">Texturing</span>
-                                <span class="tech-tag">PS1 Aesthetic</span>
-                            </div>
-                            <div class="project-buttons">
-                                <a href="https://smartmonkeys.itch.io/aedopolis" target="_blank" class="btn-download">🎮 Play on itch.io</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="icon">📧</div>
+                    <h4>Email</h4>
+                    <a href="mailto:Sebastianbarbosa10@gmail.com">Sebastianbarbosa10@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="icon">📱</div>
+                    <h4>Phone</h4>
+                    <a href="tel:+541131886551">+54 11 3188 6551</a>
+                </div>
+                <div class="contact-card">
+                    <div class="icon">📍</div>
+                    <h4>Location</h4>
+                    <p>Buenos Aires, Argentina</p>
+                </div>
+            </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/images/unreal-ai.jpg" alt="Unreal Engine AI Project Screenshot">
-                        </div>
-                        <div class="project-content">
-                            <h3>Unreal Engine 5 - AI Project</h3>
-                            <p>Academic project developed in Unreal Engine featuring AI implementation with Behavior Trees, Blueprint coding, and custom level design. Demonstrates advanced AI behaviors and environmental interaction systems.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Unreal Engine 5</span>
-                                <span class="tech-tag">Blueprints</span>
-                                <span class="tech-tag">Behavior Trees</span>
-                                <span class="tech-tag">Level Design</span>
-                            </div>
-                            <div class="project-buttons">
-                                <a href="https://drive.google.com/uc?export=download&id=1dOHMtFwhtX4kJMGtbIDD5l9qjpQaSztE" target="_blank" class="btn-download">📥 Download Build</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sebastian-barbosa-217a51ab/" target="_blank" class="social-btn" title="LinkedIn">💼</a>
+                <a href="https://github.com/Sebarbosa10" target="_blank" class="social-btn" title="GitHub">💻</a>
+                <a href="mailto:Sebastianbarbosa10@gmail.com" class="social-btn" title="Email">✉️</a>
+            </div>
+        </div>
+    </section>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/images/fsm-project.jpg" alt="AI FSM Project Screenshot">
-                        </div>
-                        <div class="project-content">
-                            <h3>AI Programming - FSM & Line of Sight</h3>
-                            <p>Academic project for Artificial Intelligence Programming course. Implemented Finite State Machine (FSM) and Line of Sight system for intelligent enemy behavior and player detection mechanics.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Unity</span>
-                                <span class="tech-tag">C#</span>
-                                <span class="tech-tag">FSM</span>
-                                <span class="tech-tag">Line of Sight</span>
-                                <span class="tech-tag">AI</span>
-                            </div>
-                            <div class="project-buttons">
-                                <a href="https://drive.google.com/uc?export=download&id=1KyGBW2YJNEib8BMbqIqk9YxnuRR-20hP" target="_blank" class="btn-download">📥 Download Build</a>
-                            </div>
-                        </div>
-                    </div>
+    <footer>
+        <p>&copy; 2024 Sebastián Barbosa | Game Developer Portfolio</p>
+        <p>Built with passion for video games 🎮</p>
+    </footer>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/images/card-game.jpg" alt="Card Combat Game Screenshot">
-                        </div>
-                        <div class="project-content">
-                            <h3>Card Combat Game with Live Action Cinematics</h3>
-                            <p>Innovative team project combining card-based combat with live-action cinematics filmed and produced by the team. Developed the turn-based system and card combat mechanics as lead programmer.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Unity</span>
-                                <span class="tech-tag">C#</span>
-                                <span class="tech-tag">Turn-Based System</span>
-                                <span class="tech-tag">Card Mechanics</span>
-                                <span class="
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Carousel functionality
+        const track = document.querySelector('.carousel-track');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.dataset.index);
+                updateCarousel();
+            });
+        });
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .contact-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.5s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
