@@ -614,6 +614,110 @@
             background: #5865f2;
         }
 
+        /* Design Section */
+        .design-section {
+            padding: 6rem 2rem;
+        }
+
+        .design-category {
+            margin-bottom: 3rem;
+        }
+
+        .design-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            color: #5865f2;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        /* Figma Cards */
+        .figma-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .figma-card {
+            background: rgba(88, 101, 242, 0.05);
+            border: 1px solid rgba(88, 101, 242, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .figma-card:hover {
+            background: rgba(88, 101, 242, 0.1);
+            border-color: #5865f2;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(88, 101, 242, 0.2);
+        }
+
+        .figma-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .figma-card h4 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .figma-card p {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .figma-link {
+            color: #5865f2;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .figma-card:hover .figma-link {
+            color: #ff4757;
+        }
+
+        /* Design Gallery */
+        .design-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4/3;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(88, 101, 242, 0.2);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            border-color: #5865f2;
+            box-shadow: 0 10px 25px rgba(88, 101, 242, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         /* Contact Section */
         .contact-content {
             text-align: center;
@@ -796,6 +900,15 @@
             .project-buttons {
                 justify-content: center;
             }
+
+            .figma-grid {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+            }
+
+            .design-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 480px) {
@@ -823,6 +936,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#design">Design</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -903,6 +1017,10 @@
                         <div class="skill-card">
                             <div class="skill-icon">📐</div>
                             <div>Illustrator</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">🖌️</div>
+                            <div>Figma</div>
                         </div>
                     </div>
                 </div>
@@ -1045,6 +1163,60 @@
                     <span class="carousel-dot" data-index="3"></span>
                 </div>
                 <button class="carousel-btn" id="nextBtn">▶</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="design" class="design-section">
+        <h2 class="section-title">Design Work</h2>
+        
+        <!-- Figma Projects -->
+        <div class="design-category">
+            <h3 class="category-title">🖌️ UI/UX Design (Figma)</h3>
+            <div class="figma-grid">
+                <a href="https://www.figma.com/design/T7EKMBk08Oy52voMMfDiiB/Tdpd----Final?node-id=48-19931&t=Zinby4OOjDr58fwb-1" target="_blank" class="figma-card">
+                    <div class="figma-icon">🎮</div>
+                    <h4>Paul Robertson Inspired App</h4>
+                    <p>Mobile app with complete UX flow. All pixel art icons hand-drawn in Illustrator, inspired by artist Paul Robertson.</p>
+                    <span class="figma-link">Ver en Figma →</span>
+                </a>
+                <a href="https://www.figma.com/design/ERzaUarrIoFtY3z9i9kKab/TDPD?node-id=0-1&t=OocDM5zxUVsD5mGQ-1" target="_blank" class="figma-card">
+                    <div class="figma-icon">🍽️</div>
+                    <h4>University Cafeteria App</h4>
+                    <p>App prototype for university dining hall. Full UX flow with carousels, components, and interactive elements.</p>
+                    <span class="figma-link">Ver en Figma →</span>
+                </a>
+                <a href="https://www.figma.com/design/B3Ylv3YrfebKkAJtNtbMzQ/Tp3-Barbosa---Lin?node-id=0-1&t=d2SeTS2RbQKRtQza-1" target="_blank" class="figma-card">
+                    <div class="figma-icon">💼</div>
+                    <h4>Web Portfolio Designs</h4>
+                    <p>Collection of web portfolio designs created individually and in collaboration with a classmate.</p>
+                    <span class="figma-link">Ver en Figma →</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Photoshop & Illustrator -->
+        <div class="design-category">
+            <h3 class="category-title">✨ Graphic Design (Photoshop & Illustrator)</h3>
+            <div class="design-gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/design-1.jpg" alt="Design 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/design-2.jpg" alt="Design 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/design-3.jpg" alt="Design 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/design-4.jpg" alt="Design 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/design-5.jpg" alt="Design 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/design-6.jpg" alt="Design 6">
+                </div>
             </div>
         </div>
     </section>
