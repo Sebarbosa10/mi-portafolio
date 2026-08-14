@@ -760,6 +760,66 @@
             object-fit: cover;
         }
 
+        .yt-thumb {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .yt-thumb::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(18, 18, 20, 0.25);
+            transition: background 0.25s;
+        }
+
+        .yt-thumb:hover::before {
+            background: rgba(18, 18, 20, 0.1);
+        }
+
+        .yt-play {
+            position: relative;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: rgba(18, 18, 20, 0.75);
+            border: 1px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s;
+        }
+
+        .yt-thumb:hover .yt-play {
+            background: var(--accent);
+        }
+
+        .yt-play svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--accent);
+            margin-left: 3px;
+            transition: fill 0.25s;
+        }
+
+        .yt-thumb:hover .yt-play svg {
+            fill: #14170f;
+        }
+
+        .project-image iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         /* Contact Section */
         .contact-content {
             text-align: center;
@@ -1098,7 +1158,7 @@
                 <div class="carousel-slide">
                     <div class="project-card">
                         <div class="project-layout">
-                            <div class="project-image">
+                            <div class="project-image" data-youtube="t_uMwSKXRks" data-slug="aedopolis">
                                 <video class="project-video" muted loop playsinline autoplay preload="metadata">
                                     <source src="assets/videos/aedopolis.mp4" type="video/mp4">
                                 </video>
@@ -1128,7 +1188,7 @@
                 <div class="carousel-slide">
                     <div class="project-card">
                         <div class="project-layout">
-                            <div class="project-image">
+                            <div class="project-image" data-youtube="UjBrrGFmUl8" data-slug="davarion">
                                 <video class="project-video" muted loop playsinline autoplay preload="metadata">
                                     <source src="assets/videos/davarion.mp4" type="video/mp4">
                                 </video>
@@ -1154,7 +1214,7 @@
                 <div class="carousel-slide">
                     <div class="project-card">
                         <div class="project-layout">
-                            <div class="project-image">
+                            <div class="project-image" data-youtube="" data-slug="footage">
                                 <video class="project-video" muted loop playsinline autoplay preload="metadata">
                                     <source src="assets/videos/footage.mp4" type="video/mp4">
                                 </video>
@@ -1180,9 +1240,9 @@
                 <div class="carousel-slide">
                     <div class="project-card">
                         <div class="project-layout">
-                            <div class="project-image">
+                            <div class="project-image" data-youtube="6PrW3iZu3Bc" data-slug="lifelineprotocol">
                                 <video class="project-video" muted loop playsinline autoplay preload="metadata">
-                                    <source src="assets/videos/mazerobot.mp4" type="video/mp4">
+                                    <source src="assets/videos/lifelineprotocol.mp4" type="video/mp4">
                                 </video>
                                 <div class="project-placeholder">
                                     <span class="tag">gameplay video coming soon</span>
@@ -1190,8 +1250,8 @@
                             </div>
                             <div class="project-content">
                                 <div class="meta">solo project</div>
-                                <h3>Maze Robot</h3>
-                                <p>First project built in Unreal Engine 5, developed entirely with Blueprints. A robot navigates a maze while I focused on learning the engine's visual scripting workflow, lighting setup, and level blockout.</p>
+                                <h3>Life Line Protocol</h3>
+                                <p>First project built in Unreal Engine 5, developed entirely with Blueprints. Focused on learning the engine's visual scripting workflow, lighting setup, and level blockout.</p>
                                 <div class="project-tech">
                                     <span class="tech-tag">Unreal Engine 5</span>
                                     <span class="tech-tag">Blueprints</span>
@@ -1207,7 +1267,7 @@
                 <div class="carousel-slide">
                     <div class="project-card">
                         <div class="project-layout">
-                            <div class="project-image">
+                            <div class="project-image" data-youtube="" data-slug="shaderscene">
                                 <video class="project-video" muted loop playsinline autoplay preload="metadata">
                                     <source src="assets/videos/shaderscene.mp4" type="video/mp4">
                                 </video>
@@ -1369,9 +1429,46 @@
         // Auto-advance carousel every 6 seconds
         setInterval(nextSlide, 6000);
 
+        // YouTube preview: if a .project-image has data-youtube="VIDEO_ID" set,
+        // show its thumbnail with a play button. Clicking loads the embedded
+        // player and starts playback. Leave data-youtube="" to keep using the
+        // local video (assets/videos/<slug>.mp4) instead.
+        document.querySelectorAll('.project-image').forEach(container => {
+            const videoId = container.dataset.youtube;
+            if (!videoId) return;
+
+            // Hide local-video system for this card since YouTube takes priority
+            const localVideo = container.querySelector('.project-video');
+            const placeholder = container.querySelector('.project-placeholder');
+            if (localVideo) localVideo.remove();
+            if (placeholder) placeholder.remove();
+
+            const thumb = document.createElement('div');
+            thumb.className = 'yt-thumb';
+            thumb.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/maxresdefault.jpg)`;
+            thumb.innerHTML = `
+                <div class="yt-play">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+            `;
+
+            thumb.addEventListener('click', () => {
+                const iframe = document.createElement('iframe');
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                iframe.title = container.dataset.slug || 'project video';
+                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                iframe.allowFullscreen = true;
+                container.innerHTML = '';
+                container.appendChild(iframe);
+            });
+
+            container.appendChild(thumb);
+        });
+
         // Auto-detect project videos: if assets/videos/<slug>.mp4 exists, show it
         // instead of the "coming soon" placeholder. Just drop the file in with
-        // the matching name — no code changes needed.
+        // the matching name — no code changes needed. Skipped for cards that
+        // already have a data-youtube ID (handled above).
         document.querySelectorAll('.project-image').forEach(container => {
             const video = container.querySelector('.project-video');
             const placeholder = container.querySelector('.project-placeholder');
