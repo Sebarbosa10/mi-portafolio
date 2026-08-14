@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebastián Barbosa | Tech Artist & Environment Artist</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Portfolio of Sebastián Barbosa — Tech Artist, Environment Artist & Level Designer. Unity, Unreal Engine 5, Blender and shader work.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sebastián Barbosa | Tech Artist & Environment Artist">
+    <meta property="og:description" content="Tech Artist, Environment Artist & Level Designer. Unity, Unreal Engine 5, Blender and shader work.">
+    <meta property="og:image" content="assets/images/aedopolis.jpg">
+    <meta property="og:url" content="https://sebarbosa10.github.io/mi-portafolio/">
+    <meta property="og:site_name" content="Sebastián Barbosa — Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sebastián Barbosa | Tech Artist & Environment Artist">
+    <meta name="twitter:description" content="Tech Artist, Environment Artist & Level Designer. Unity, Unreal Engine 5, Blender and shader work.">
+    <meta name="twitter:image" content="assets/images/aedopolis.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -488,11 +506,15 @@
             border-right: 1px solid var(--border);
         }
 
-        .project-image img {
+        .project-image img,
+        .project-image video {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            padding: 1rem;
+            object-fit: cover;
+        }
+
+        .project-image video {
+            display: none;
         }
 
         .project-placeholder {
@@ -1077,7 +1099,12 @@
                     <div class="project-card">
                         <div class="project-layout">
                             <div class="project-image">
-                                <img src="assets/images/aedopolis.jpg" alt="Aedopolis Screenshot">
+                                <video class="project-video" muted loop playsinline autoplay preload="metadata">
+                                    <source src="assets/videos/aedopolis.mp4" type="video/mp4">
+                                </video>
+                                <div class="project-placeholder">
+                                    <span class="tag">gameplay video coming soon</span>
+                                </div>
                             </div>
                             <div class="project-content">
                                 <div class="meta">team of 5 · 9 months</div>
@@ -1102,8 +1129,11 @@
                     <div class="project-card">
                         <div class="project-layout">
                             <div class="project-image">
+                                <video class="project-video" muted loop playsinline autoplay preload="metadata">
+                                    <source src="assets/videos/davarion.mp4" type="video/mp4">
+                                </video>
                                 <div class="project-placeholder">
-                                    <span class="tag">preview coming soon</span>
+                                    <span class="tag">gameplay video coming soon</span>
                                 </div>
                             </div>
                             <div class="project-content">
@@ -1125,8 +1155,11 @@
                     <div class="project-card">
                         <div class="project-layout">
                             <div class="project-image">
+                                <video class="project-video" muted loop playsinline autoplay preload="metadata">
+                                    <source src="assets/videos/footage.mp4" type="video/mp4">
+                                </video>
                                 <div class="project-placeholder">
-                                    <span class="tag">preview coming soon</span>
+                                    <span class="tag">gameplay video coming soon</span>
                                 </div>
                             </div>
                             <div class="project-content">
@@ -1142,6 +1175,59 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Maze Robot -->
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <div class="project-layout">
+                            <div class="project-image">
+                                <video class="project-video" muted loop playsinline autoplay preload="metadata">
+                                    <source src="assets/videos/mazerobot.mp4" type="video/mp4">
+                                </video>
+                                <div class="project-placeholder">
+                                    <span class="tag">gameplay video coming soon</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="meta">solo project</div>
+                                <h3>Maze Robot</h3>
+                                <p>First project built in Unreal Engine 5, developed entirely with Blueprints. A robot navigates a maze while I focused on learning the engine's visual scripting workflow, lighting setup, and level blockout.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Unreal Engine 5</span>
+                                    <span class="tech-tag">Blueprints</span>
+                                    <span class="tech-tag">Lighting</span>
+                                    <span class="tech-tag">Blockout</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shader Scene -->
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <div class="project-layout">
+                            <div class="project-image">
+                                <video class="project-video" muted loop playsinline autoplay preload="metadata">
+                                    <source src="assets/videos/shaderscene.mp4" type="video/mp4">
+                                </video>
+                                <div class="project-placeholder">
+                                    <span class="tag">gameplay video coming soon</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="meta">solo project</div>
+                                <h3>Shader Scene</h3>
+                                <p>A standalone scene built entirely around custom shader work. Explored shader-driven materials and effects to shape the mood, lighting, and visual identity of the space from the ground up.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Shaders</span>
+                                    <span class="tech-tag">Real-Time Rendering</span>
+                                    <span class="tech-tag">Lighting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="carousel-controls">
@@ -1150,6 +1236,8 @@
                     <span class="carousel-dot active" data-index="0"></span>
                     <span class="carousel-dot" data-index="1"></span>
                     <span class="carousel-dot" data-index="2"></span>
+                    <span class="carousel-dot" data-index="3"></span>
+                    <span class="carousel-dot" data-index="4"></span>
                 </div>
                 <button class="carousel-btn" id="nextBtn">▶</button>
             </div>
@@ -1280,6 +1368,26 @@
 
         // Auto-advance carousel every 6 seconds
         setInterval(nextSlide, 6000);
+
+        // Auto-detect project videos: if assets/videos/<slug>.mp4 exists, show it
+        // instead of the "coming soon" placeholder. Just drop the file in with
+        // the matching name — no code changes needed.
+        document.querySelectorAll('.project-image').forEach(container => {
+            const video = container.querySelector('.project-video');
+            const placeholder = container.querySelector('.project-placeholder');
+            if (!video) return;
+
+            video.addEventListener('loadeddata', () => {
+                video.style.display = 'block';
+                if (placeholder) placeholder.style.display = 'none';
+                video.play().catch(() => {});
+            });
+
+            video.addEventListener('error', () => {
+                video.style.display = 'none';
+                if (placeholder) placeholder.style.display = 'flex';
+            });
+        });
 
         // Subtle fade-in on scroll
         const observerOptions = {
