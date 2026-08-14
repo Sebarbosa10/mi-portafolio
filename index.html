@@ -611,6 +611,40 @@
             color: var(--accent-strong);
         }
 
+        .coming-soon-note {
+            margin-top: 0.4rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .coming-soon-note .tag {
+            display: inline-block;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--accent);
+            border: 1px solid var(--border-strong);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .coming-soon-note p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin: 0;
+        }
+
+        .coming-soon-note a {
+            color: var(--accent-strong);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border-strong);
+        }
+
+        .coming-soon-note a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
         /* Carousel Controls */
         .carousel-controls {
             display: flex;
@@ -1176,9 +1210,6 @@
                                     <span class="tech-tag">Environment Art</span>
                                     <span class="tech-tag">Level Art</span>
                                 </div>
-                                <div class="project-buttons">
-                                    <a href="https://smartmonkeys.itch.io/aedopolis" target="_blank" class="btn-download">Play on itch.io</a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1230,6 +1261,10 @@
                                     <span class="tech-tag">Unity</span>
                                     <span class="tech-tag">Level Design</span>
                                     <span class="tech-tag">Tech Art</span>
+                                </div>
+                                <div class="coming-soon-note">
+                                    <span class="tag">Coming soon</span>
+                                    <p>Want to try the test build? <a href="mailto:sebastianbarbosa10@gmail.com?subject=Footage%20-%20Test%20Build%20Request">Get in touch</a>.</p>
                                 </div>
                             </div>
                         </div>
@@ -1425,9 +1460,6 @@
                 updateCarousel();
             });
         });
-
-        // Auto-advance carousel every 6 seconds
-        setInterval(nextSlide, 6000);
 
         // YouTube preview: if a .project-image has data-youtube="VIDEO_ID" set,
         // show its thumbnail with a play button. Clicking loads the embedded
