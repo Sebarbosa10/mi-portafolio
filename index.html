@@ -217,11 +217,14 @@
             background: var(--accent);
             color: #14170f;
             border: 1px solid var(--accent);
+            transition: all 0.25s;
         }
 
         .btn-primary:hover {
             background: var(--accent-strong);
             border-color: var(--accent-strong);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(143, 163, 130, 0.25);
         }
 
         .btn-secondary {
@@ -233,6 +236,7 @@
         .btn-secondary:hover {
             border-color: var(--accent);
             color: var(--accent-strong);
+            transform: translateY(-2px);
         }
 
         .hero-visual {
@@ -259,8 +263,22 @@
             font-size: 2.2rem;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
             color: var(--text);
+            position: relative;
+            padding-bottom: 1.1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 36px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 2px;
         }
 
         /* About Section */
@@ -291,7 +309,9 @@
         .about-photo img {
             display: block;
             width: 100%;
-            height: auto;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: center 50%;
             border-radius: 4px;
             filter: grayscale(15%);
         }
@@ -330,6 +350,7 @@
             padding: 2rem;
             border-radius: 8px;
             border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
         }
 
         .tech-stack h4 {
@@ -382,6 +403,7 @@
             padding: 2rem;
             border-radius: 8px;
             border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
         }
 
         .experience-section h3 {
@@ -487,13 +509,16 @@
             border-radius: 8px;
             overflow: hidden;
             border: 1px solid var(--border);
-            transition: border-color 0.3s;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             max-width: 800px;
             margin: 0 auto;
         }
 
         .project-card:hover {
             border-color: var(--border-strong);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
         }
 
         .project-layout {
@@ -751,6 +776,7 @@
         .figma-card:hover {
             border-color: var(--accent);
             transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
         }
 
         .figma-card h4 {
@@ -892,11 +918,12 @@
             padding: 1.4rem 1rem;
             border-radius: 8px;
             border: 1px solid var(--border);
-            transition: border-color 0.25s;
-        }
+            transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
 
         .contact-card:hover {
             border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
         }
 
         .contact-card h4 {
@@ -1098,7 +1125,6 @@
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
                 <a href="https://github.com/Sebarbosa10" target="_blank" class="btn btn-secondary">GitHub</a>
-                <a href="https://drive.google.com/uc?export=download&id=10R_UWb9_zg_NVb_M7AvfhvzyjSROuxVr" target="_blank" class="btn btn-secondary">Download CV</a>
             </div>
         </div>
         <div class="hero-visual">
